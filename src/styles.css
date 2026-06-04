@@ -31,7 +31,7 @@
 
   /* Backgrounds */
   --color-background: #F9E1EE;
-  --color-background-soft: #f3c8d1;
+  --color-background-2: #f3c8d1;
 
   /* Text */
   --color-text: #1a1a1a;
@@ -46,9 +46,7 @@
 
   /* States */
   --color-success: #2e7d32;
-  --color-warning: #ff9800;
   --color-error: #c62828;
-  --color-info: #1976d2;
 
   /* Spacing */
   --space-1: 4px;

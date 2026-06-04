@@ -4,6 +4,7 @@
       class="meal-slot-card__image"
       [src]="recipe.img || 'img/generic-recipe-img.jpg'"
       [alt]="recipe.title"
+      (error)="onImageError($event)"
     />
 
     <div class="meal-slot-card__content">

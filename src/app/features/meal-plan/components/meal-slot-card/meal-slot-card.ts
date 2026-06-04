@@ -13,7 +13,7 @@ import {RouterLink} from '@angular/router';
   styleUrl: './meal-slot-card.scss',
 })
 export class MealSlotCard {
-  @Input({ required: true }) slot!: MealSlot;
+  @Input({required: true}) slot!: MealSlot;
   @Output() replace = new EventEmitter<MealSlot>();
 
   protected onReplace(): void {
@@ -31,5 +31,10 @@ export class MealSlotCard {
       default:
         return "tipo de comida"
     }
+  }
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.src = 'img/generic-recipe-img.jpg';
   }
 }
