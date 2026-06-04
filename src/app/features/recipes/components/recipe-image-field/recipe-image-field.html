@@ -11,6 +11,7 @@
           class="recipe-image-field__image"
           [src]="imageUrl"
           alt="Imagen de la receta"
+          (error)="onImageError($event)"
         />
       </div>
 

@@ -53,4 +53,9 @@ export class RecipeImageField {
     this.imageRemoved.emit();
     this.closePreview();
   }
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.src = 'img/generic-recipe-img.jpg';
+  }
 }
