@@ -33,6 +33,7 @@
       class="featured-recipe-card__image"
       [src]="recipe?.img ?? '/img/generic-recipe-img.jpg' "
       [alt]="recipe?.title"
+      (error)="onImageError($event)"
     />
   </div>
 </article>

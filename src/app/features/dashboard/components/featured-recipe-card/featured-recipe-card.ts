@@ -16,4 +16,9 @@ import {UiChip} from '../../../../shared/ui/ui-chip/ui-chip';
 })
 export class FeaturedRecipeCard  {
   @Input() recipe!: Recipe | undefined;
+
+  onImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.src = 'img/generic-recipe-img.jpg';
+  }
 }
