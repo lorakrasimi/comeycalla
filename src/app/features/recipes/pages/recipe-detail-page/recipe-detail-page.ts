@@ -80,7 +80,6 @@ export class RecipeDetailPage implements OnInit {
           this.recipe.set(this.mapRecipe(recipe));
         },
         error: (error) => {
-          console.error('Error loading recipe', error);
           this.router.navigate(['/recipes']);
         }
       });
@@ -107,7 +106,7 @@ export class RecipeDetailPage implements OnInit {
   }
 
   goBack() {
-    this.location.back();
+    this.router.navigate(['/recipes']);
   }
 
   onImageError(event: Event): void {
