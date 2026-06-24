@@ -71,7 +71,6 @@ export class RecipeFormComponent implements OnInit  {
       new FormGroup({
         name: new FormControl('', {
           nonNullable: true,
-          validators: [Validators.required],
         }),
       })
     );
@@ -116,8 +115,24 @@ export class RecipeFormComponent implements OnInit  {
   onSubmit(): void {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+
+      console.log('Formulario inválido');
+      console.log(this.form.errors);
+
+      Object.keys(this.form.controls).forEach(key => {
+        const control = this.form.get(key);
+
+        if (control?.invalid) {
+          console.log(`Campo: ${key}`);
+          console.log('Valor:', control.value);
+          console.log('Errores:', control.errors);
+        }
+      });
+
       return;
     }
+
+    console.log('Formulario válido');
     this.submit.emit();
   }
 
