@@ -9,7 +9,7 @@ ComeYCalla is a full-stack web app built as my final degree project (Higher Voca
 ## Demos
 
 Create recipe with URL
-![Demo](docs/demo-import.gif)
+![Demo](/demo-import.gif)
 
 Create daily menu and shopping list
 ![Demo](docs/demo-menu.gif)
