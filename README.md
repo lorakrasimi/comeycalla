@@ -12,7 +12,7 @@ Create recipe with URL
 ![Demo](/demo-import.gif)
 
 Create daily menu and shopping list
-![Demo](docs/demo-menu.gif)
+![Demo](/demo-menu.gif)
 
 ## Features
 
@@ -29,11 +29,11 @@ Create daily menu and shopping list
 
 | Import from images | Import from URL | Weekly menu |
 |---|---|---|
-| ![](docs/import-image.png) | ![](docs/import-url.png) | ![](docs/menu.png) |
+| ![](/import-image.png) | ![](/import-url.png) | ![](/menu.png) |
 
 | Shopping list | Recipe detail | Login |
 |---|---|---|
-| ![](docs/shopping-list.png) | ![](docs/recipe-detail.png) | ![](docs/login.png) |
+| ![](/shopping-list.png) | ![](/recipe-detail.png) | ![](/login.png) |
 
 The UI was designed first in Figma: [view the prototype](https://www.figma.com/design/LMReAQ1W1nl2oGS6U8Vtmb/Comeycalla?node-id=2050-676&t=EydG3Bcp12x4dULE-1).
 
@@ -105,7 +105,8 @@ Repositories:
      ```bash
      docker compose up -d
      ```
-     This starts MySQL on port `3307` with the default credentials the backend already expects (database `comeycalla`, user `comeycalla_user`). Then run the [schema script](https://github.com/lorakrasimi/comeycalla-backend/blob/main/src/main/resources/schema.sql)..
+     This starts MySQL on port `3307` with the default credentials the backend already expects (database `comeycalla`, user `comeycalla_user`). Then run the [schema script](https://github.com/lorakrasimi/comeycalla-backend/src/main/resources/schema.sql).
+     
    - **Without Docker:** use a local MySQL instance, run the same schema script, and point the backend to it using the environment variables `DB_URL`, `DB_USERNAME` and `DB_PASSWORD`.
 
    The datasource in `application.properties` reads those variables and falls back to the local Docker defaults:
